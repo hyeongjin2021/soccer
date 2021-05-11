@@ -115,3 +115,26 @@ if a=='3':
     plt.barh(x, card_card, label='경고', color='r')
     plt.legend()
     plt.show()
+
+#학생1 그래프
+game_count=[]
+game_out=[]
+for PRB in footballPRB1:
+    game_count.append(int(PRB[13]))   #경기수
+    game_out.append(int(PRB[8]))   #퇴장
+count_count=[]
+out_out=[]
+for i in range(20):
+    count_count.append(game_count[i])
+    out_out.append(game_out[i])
+
+
+print('경기수:',count_count)
+print('퇴장:',out_out)
+if a=='1':
+    x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+    plt.yticks(x, name)
+    plt.barh(x, count_count, label='경기수', color='y')
+    plt.barh(x, out_out, label='퇴장', color='r')
+    plt.legend()
+    plt.show()
