@@ -9,20 +9,6 @@ wfootballPRB = soup.find_all('div', {"id":"wfootballPlayerRecordBody"})
 wfootballPRB_tbody=wfootballPRB[0].find_all("tbody")
 wfootballPRB_tbody_row=wfootballPRB_tbody[0].find_all("tr")
 
-footballPRB1=[] #리스트의 리스트
-count=0
-for tr in wfootballPRB_tbody_row:
-    PRB=[]
-    td=tr.find_all("td")
-    for record in td:
-        print(record.get_text().strip("\n\n"),end=",")
-        PRB.append(record.get_text().strip('\n\n\n'))
-    print("")
-    count=count+1
-    if count == '10':
-        break
-    footballPRB1.append(PRB)
-
 print('================================================================')
 a=input('1,2,3 중 하나 입력:')
 footballPRB1=[] #리스트의 리스트
@@ -35,7 +21,7 @@ for tr in wfootballPRB_tbody_row:
         PRB.append(record.get_text().strip('\n\n\n'))
     print("")
     count=count+1
-    if count == '10':
+    if count == 10:
         break
     footballPRB1.append(PRB)
 
