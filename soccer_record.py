@@ -1,3 +1,4 @@
+#학생1 시작
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
@@ -9,6 +10,7 @@ wfootballPRB = soup.find_all('div', {"id":"wfootballPlayerRecordBody"})
 wfootballPRB_tbody=wfootballPRB[0].find_all("tbody")
 wfootballPRB_tbody_row=wfootballPRB_tbody[0].find_all("tr")
 
+#학생2 시작
 footballPRB1=[] #리스트의 리스트
 count=0
 for tr in wfootballPRB_tbody_row:
